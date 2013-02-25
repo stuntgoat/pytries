@@ -1,13 +1,3 @@
-"""
-Breadth first search used a queue to place unexplored nodes on
-the frontier.
-
-
-put the first node on the queue
-  pop the node off of the queue
-    is this the goal? if so we're done
-    if not, put the children nodes on the queue
-"""
 from Queue import Queue
 from random import choice
 from time import sleep
@@ -28,6 +18,7 @@ class Node(object):
 
     def __repr__(self):
         return self.name
+
     def printer(self):
         if 'root' == self.name:
             print self.name
@@ -44,8 +35,15 @@ class Tree(Node):
         self.levels = 0
         self.name = 'root'
         self.expand_queue = Queue()
+
+        # put the root node on the trie
         self.expand_queue.put(self)
+
+        # create a naming function
         self._namer = name_factory(self.node_count)
+
+        # create the trie
+        self.expand_tree()
 
     def expand_tree(self):
 
