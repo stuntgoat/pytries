@@ -1,7 +1,9 @@
 pytries
 =======
 
-Makes a trie that has `num_nodes` number of nodes and maximum `max_edges` number of edges connected to each node.
+Work in progress. This does not make an actual Trie yet.
+
+Currently only makes a tree object that has `num_nodes` number of nodes and maximum `max_edges` number of edges connected to each node.
 
 Usage: `Tree(<num_nodes>, <max_edges>)`
 

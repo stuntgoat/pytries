@@ -46,7 +46,6 @@ class Tree(Node):
         self.expand_tree()
 
     def expand_tree(self):
-
         tree = self.expand_queue.get()
 
         self.levels += 1
@@ -61,3 +60,9 @@ class Tree(Node):
             self.expand_queue.put(n)
 
         return self.expand_tree()
+
+class Trie(Tree):
+    """
+
+    """
+    pass
