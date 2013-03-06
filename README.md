@@ -5,9 +5,9 @@ Work in progress. This does not make an actual Trie yet.
 
 Currently only makes a tree object that has `num_nodes` number of nodes and maximum `max_edges` number of edges connected to each node.
 
-Usage: `Tree(<num_nodes>, <max_edges>)`
+Usage: `Tree(edges=<num>, nodes=<num>)`
 
-       t = Tree(10, 3)
+       t = Tree(nodes=10, edges=3)
        t.printer()
 
 output:
